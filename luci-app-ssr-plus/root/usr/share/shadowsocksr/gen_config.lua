@@ -325,8 +325,8 @@ local tuic = {
 				receive_window = tonumber(server.receive_window)
         },
 		["local"] = {
-				server = "0.0.0.0:" .. tonumber(local_port),
-				--dual_stack = (server.tuic_dual_stack == "1") and true or false,
+				server = ":::" .. tonumber(local_port),
+				dual_stack = (server.tuic_dual_stack == "1") and true or false,
 				max_packet_size = tonumber(server.tuic_max_package_size)
 		}
 }
