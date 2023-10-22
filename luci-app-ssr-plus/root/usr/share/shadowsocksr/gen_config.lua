@@ -429,7 +429,7 @@ local tuic = {
 		},
 		["local"] = {
 			server = tonumber(socks_port) and (server.tuic_dual_stack == "1" and "[::1]:" or "127.0.0.1:")  .. (socks_port == "0" and local_port or tonumber(socks_port)),
-			dual_stack = (server.tuic_dual_stack == "1") and true or false,
+			dual_stack = (server.tuic_dual_stack == "1") and true or nil,
 			max_packet_size = tonumber(server.tuic_max_package_size)
 		}
 }
